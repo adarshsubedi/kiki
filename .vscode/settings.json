@@ -1,10 +1,18 @@
 {
     "cSpell.words": [
+        "continuebtn",
+        "continuetxt",
         "kikilogo",
+        "loginbtn",
+        "loginnow",
+        "loginnowtxt",
         "logintxt",
         "nexttxt",
+        "selectbox",
         "signupbtn",
         "signuptxt",
-        "skiptxt"
+        "skiptxt",
+        "submitbtn",
+        "submittxt"
     ]
 }

@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+import SplashScreen from 'react-native-splash-screen';
 
 import WelcomeScreen from './src/components/Screens/WelcomeScreen';
 import LoginScreen from './src/components/Screens/LoginScreen';
@@ -11,11 +12,20 @@ import Experience from './src/components/Screens/Experience';
 import Love from './src/components/Screens/Love';
 import Organizer from './src/components/Screens/Organizer';
 import Congratulations from './src/components/Screens/Congratulations';
+import ForgetPassword from './src/components/Screens/ForgetPassword';
+import EnterCode from './src/components/Screens/EnterCode';
+import ChangePassword from './src/components/ChangePassword';
+import PasswordChanged from './src/components/Screens/PasswordChanged';
+// import { useEffect } from 'react/cjs/react.production.min';
 
 const Stack = createNativeStackNavigator();
 
 
 const App = ({ navigation }) => {
+useEffect(() => {
+  SplashScreen.hide();
+}, []);
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Welcome'>
@@ -26,7 +36,10 @@ const App = ({ navigation }) => {
         <Stack.Screen name='Experience' component={Experience} options={{ headerShown: false }} />
         <Stack.Screen name='Love' component={Love} options={{ headerShown: false }} />
         <Stack.Screen name='Organizer' component={Organizer} options={{ headerShown: false }} />
-        <Stack.Screen name='Congratulations' component={Congratulations} options={{ headerShown: false }} />
+        <Stack.Screen name='ForgetPassword' component={ForgetPassword} options={{ headerShown: false }} />
+        <Stack.Screen name='EnterCode' component={EnterCode} options={{ headerShown: false }} />
+        <Stack.Screen name='ChangePassword' component={ChangePassword} options={{ headerShown: false }} />
+        <Stack.Screen name='PasswordChanged' component={PasswordChanged} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
