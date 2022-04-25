@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         margin: 7,
         top: 55,
+        padding: 10,
     },
     signupbtn: {
         top: 350,

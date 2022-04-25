@@ -47,21 +47,25 @@ const EnterCode = (props) => {
                     placeholderTextColor='white'
                     fontFamily='Public Sans'
                     color='white'
+                    keyboardType='numeric'
                 />
                 <TextInput style={styles.code}
                     placeholderTextColor='white'
                     fontFamily='Public Sans'
                     color='white'
+                    keyboardType='numeric'
                 />
                 <TextInput style={styles.code}
                     placeholderTextColor='white'
                     fontFamily='Public Sans'
                     color='white'
+                    keyboardType='numeric'
                 />
                 <TextInput style={styles.code}
                     placeholderTextColor='white'
                     fontFamily='Public Sans'
                     color='white'
+                    keyboardType='numeric'
                 />
             </View>
 
@@ -90,10 +94,12 @@ const styles = StyleSheet.create({
         margin: 7,
         width: 80,
         top: 50,
+        textAlign: 'center',
     },
     otp: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
+        
     },
     continuebtn: {
         top: 50,

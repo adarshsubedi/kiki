@@ -15,6 +15,7 @@ import ForgetPassword from './src/components/Screens/ForgetPassword';
 import EnterCode from './src/components/Screens/EnterCode';
 import ChangePassword from './src/components/ChangePassword';
 import PasswordChanged from './src/components/Screens/PasswordChanged';
+import SplashScreen from './src/components/Screens/SplashScreen';
 
 
 
@@ -23,7 +24,8 @@ const Stack = createNativeStackNavigator();
 const App = ({ navigation }) => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Welcome'>
+      <Stack.Navigator initialRouteName='SplashScreen'>
+        <Stack.Screen name='SplashScreen' component={SplashScreen} options={{ headerShown: false }} />
         <Stack.Screen name='Welcome' component={WelcomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name='Login' component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name='Signup' component={SignupScreen} options={{ headerShown: false }} />
@@ -31,6 +33,7 @@ const App = ({ navigation }) => {
         <Stack.Screen name='Experience' component={Experience} options={{ headerShown: false }} />
         <Stack.Screen name='Love' component={Love} options={{ headerShown: false }} />
         <Stack.Screen name='Organizer' component={Organizer} options={{ headerShown: false }} />
+        <Stack.Screen name='Congratulations' component={Congratulations} options={{ headerShown: false }} />
         <Stack.Screen name='ForgetPassword' component={ForgetPassword} options={{ headerShown: false }} />
         <Stack.Screen name='EnterCode' component={EnterCode} options={{ headerShown: false }} />
         <Stack.Screen name='ChangePassword' component={ChangePassword} options={{ headerShown: false }} />

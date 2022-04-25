@@ -52,8 +52,7 @@ const Love = (props) => {
             </Text>
 
             <View style={styles.btn}>
-                <TouchableOpacity
-                //onPress={() => navigation.navigate('Signup')}
+                <TouchableOpacity onPress={() => navigation.navigate('Congratulations')}
                     style={styles.skip}>
                     <Text style={styles.skiptxt}>
                         Skip
