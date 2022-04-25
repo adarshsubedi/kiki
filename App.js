@@ -2,7 +2,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import React, {useEffect} from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import SplashScreen from 'react-native-splash-screen';
 
 import WelcomeScreen from './src/components/Screens/WelcomeScreen';
 import LoginScreen from './src/components/Screens/LoginScreen';
@@ -16,16 +15,12 @@ import ForgetPassword from './src/components/Screens/ForgetPassword';
 import EnterCode from './src/components/Screens/EnterCode';
 import ChangePassword from './src/components/ChangePassword';
 import PasswordChanged from './src/components/Screens/PasswordChanged';
-// import { useEffect } from 'react/cjs/react.production.min';
+
+
 
 const Stack = createNativeStackNavigator();
 
-
 const App = ({ navigation }) => {
-useEffect(() => {
-  SplashScreen.hide();
-}, []);
-
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Welcome'>

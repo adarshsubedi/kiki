@@ -14,5 +14,6 @@
         "skiptxt",
         "submitbtn",
         "submittxt"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

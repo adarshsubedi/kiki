@@ -125,6 +125,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         borderRadius: 7,
         margin: 7,
+        padding: 10,
     },
     horizontal: {
         flexDirection: 'row',
@@ -136,6 +137,7 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         margin: 7,
         width: 80,
+        padding: 10,
     },
     number: {
         borderColor: '#637381',
@@ -144,6 +146,7 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         margin: 7,
         width: 240,
+        padding: 10,
     },
     help: {
         color: 'white',
