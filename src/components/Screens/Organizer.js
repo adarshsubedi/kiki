@@ -36,7 +36,7 @@ const Love = (props) => {
                 left: 15,
                 lineHeight: 45,
             }}>
-               Follow{'\n'}organizers
+                Follow{'\n'}organizers
             </Text>
 
             <Text style={{
@@ -50,6 +50,8 @@ const Love = (props) => {
             }}>
                 Follow your favorite event{'\n'}promoters, event organizers,{'\n'}event spaces and bars.
             </Text>
+
+            
 
             <View style={styles.btn}>
                 <TouchableOpacity onPress={() => navigation.navigate('Congratulations')}
@@ -78,11 +80,11 @@ const styles = StyleSheet.create({
         width: windowWidth,
         backgroundColor: '#000E28',
     },
-    btn:{
+    btn: {
         justifyContent: 'space-around',
         top: 380,
-      },
-      skip: {
+    },
+    skip: {
         marginHorizontal: 15,
         height: 48,
         //backgroundColor: '#00AB55',
@@ -91,9 +93,9 @@ const styles = StyleSheet.create({
 
         borderColor: '#00AB55',
         borderWidth: 1,
-    
-      },
-      skiptxt: {
+
+    },
+    skiptxt: {
         fontFamily: 'Public Sans',
         fontSize: 15,
         color: '#00AB55',
@@ -103,20 +105,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 15,
         fontWeight: 'bold',
-      },
-      next: {
+    },
+    next: {
         // width: windowWidth,
         marginHorizontal: 15,
         height: 50,
         backgroundColor: '#00AB55',
         borderRadius: 7,
-      },
-      nexttxt: {
+    },
+    nexttxt: {
         color: 'black',
         padding: 15,
         textAlign: 'center',
         fontWeight: 'bold',
-      },
+    },
 })
 
 export default Love;

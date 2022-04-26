@@ -56,17 +56,16 @@ const Location = (props) => {
                 placeholderTextColor='white'
                 fontFamily='Public Sans'
                 color='white'
-                
-
             >
-                {/* <Icon name='map-marker' size={25}
+                <Icon name='map-marker' size={25}
                     style={{
                         color: 'white',
                         padding: 19,
                         position: 'absolute',
-                        left: 20,
+                        alignSelf: 'flex-end',
+                        justifyContent: 'flex-end',
                     }}>
-                </Icon> */}
+                </Icon>
 
             </TextInput>
 

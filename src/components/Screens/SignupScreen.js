@@ -37,12 +37,24 @@ const SignupScreen = (props) => {
                     fontFamily='Public Sans'
                     color='white'
                 />
-                <TextInput style={styles.input}
-                    placeholder={'Date of birth'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
+                <View style={styles.input_dup}>
+                    <TextInput
+                        style={{
+                            flex: 1,
+                        }}
+                        placeholder={'Date of birth'}
+                        placeholderTextColor='white'
+                        fontFamily='Public Sans'
+                        color='white'
+                        inlineImageLeft='calendar' />
+                    <Icon name='map-marker' size={25}
+                        style={{
+                            color: 'white',
+                            alignSelf: 'center',
+                            paddingLeft: 15,
+                            paddingRight: 15,
+                        }} />
+                </View>
                 <TextInput style={styles.input}
                     placeholder={'Password'}
                     placeholderTextColor='white'
@@ -127,6 +139,15 @@ const styles = StyleSheet.create({
         margin: 7,
         padding: 10,
     },
+    input_dup: {
+        borderColor: '#637381',
+        borderWidth: 1,
+        marginHorizontal: 10,
+        borderRadius: 7,
+        margin: 7,
+        paddingLeft: 10,
+        flexDirection: 'row',
+    },
     horizontal: {
         flexDirection: 'row',
     },
@@ -164,12 +185,12 @@ const styles = StyleSheet.create({
         // borderWidth: 1,
         margin: 20,
         borderRadius: 7,
-      },
-      signuptxt: {
+    },
+    signuptxt: {
         color: 'black',
         padding: 15,
         textAlign: 'center',
         fontWeight: 'bold',
-      },
+    },
 
 })
