@@ -8,7 +8,7 @@ const windowHeight = Dimensions.get('window').height;
 const SplashScreen = (props) => {
     useEffect(() => {
         setTimeout(() => {
-            navigation.navigate('Welcome')
+            navigation.navigate('index')
         }, 1000);
     })
 

@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
         "birgjung",
+        "buttonskip",
+        "buttontxtnext",
+        "buttontxtskip",
         "continuebtn",
         "continuetxt",
         "eventcat",
@@ -19,6 +22,8 @@
         "signupbtn",
         "signuptxt",
         "skiptxt",
+        "Stylenext",
+        "Styleskip",
         "submitbtn",
         "submittxt"
     ],

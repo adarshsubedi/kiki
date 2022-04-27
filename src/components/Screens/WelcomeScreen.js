@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions, TextInput } from 'react-native';
 import React from 'react';
 
+import { useNavigation } from '@react-navigation/native';
+
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 
-const WelcomeScreen = (props) => {
-  const { navigation } = props
+const WelcomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View>
@@ -19,20 +21,19 @@ const WelcomeScreen = (props) => {
 
       <View style={styles.btn}>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}
-        style={styles.login}>
+          style={styles.login}>
           <Text style={styles.logintxt}>
             Log in
           </Text>
         </TouchableOpacity>
-      
+
         <TouchableOpacity onPress={() => navigation.navigate('Signup')}
-        style={styles.signup}>
+          style={styles.signup}>
           <Text style={styles.signuptxt}>
             Sign up
           </Text>
         </TouchableOpacity>
       </View>
-
     </View>
   )
 }
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     margin: 24,
     top: 80,
     width: 310,
-    
+
     // width: 290,
     //flex: 1,
   },
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     padding: 15,
     textAlign: 'center',
   },
-  btn:{
+  btn: {
     justifyContent: 'space-around',
     top: 425,
   },

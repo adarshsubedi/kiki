@@ -1,12 +1,23 @@
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const Love = (props) => {
     const { navigation } = props
+
+    const [selected, setSelected] = useState(0);
+
+    const onEventSelected=tick=>{
+        setSelected(tick);
+        if(props.callback){
+            props.callback(tick)
+        }
+    };
+
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={() => navigation.navigate('Experience')}>
@@ -53,7 +64,15 @@ const Love = (props) => {
 
 
             <View style={styles.eventcat}>
-                <TouchableOpacity style={styles.art}>
+                <TouchableOpacity onPress={() => onEventSelected(1)}
+                style={styles.art}>
+                     <Icon name='map-marker' size={10}
+                        style={{
+                            color: 'white',
+                            alignSelf: 'center',
+                            paddingLeft: 15,
+                            paddingRight: 15,
+                        }} />
                     <Text style={styles.txt}>
                         Arts Theater
                     </Text>
@@ -194,6 +213,7 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         borderColor: '#FC0D1B',
         borderWidth: 1,
+        left: 3,
     },
     auto: {
         backgroundColor: '#FD77283D',
@@ -227,6 +247,7 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         borderColor: '#FEEE36',
         borderWidth: 1,
+        left: 8,
     },
     eventcat:{
         flexDirection: 'row',
@@ -265,10 +286,8 @@ const styles = StyleSheet.create({
     skip: {
         marginHorizontal: 15,
         height: 48,
-        //backgroundColor: '#00AB55',
         marginBottom: 15,
         borderRadius: 7,
-
         borderColor: '#00AB55',
         borderWidth: 1,
 

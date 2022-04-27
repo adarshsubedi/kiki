@@ -13,9 +13,12 @@ import Organizer from './src/components/Screens/Organizer';
 import Congratulations from './src/components/Screens/Congratulations';
 import ForgetPassword from './src/components/Screens/ForgetPassword';
 import EnterCode from './src/components/Screens/EnterCode';
-import ChangePassword from './src/components/ChangePassword';
+import ChangePassword from './src/components/Screens/ChangePassword';
 import PasswordChanged from './src/components/Screens/PasswordChanged';
 import SplashScreen from './src/components/Screens/SplashScreen';
+import TestScreen from './src/components/Screens/TestScreen';
+
+import StarterBoard from './src/components/Screens/StarterBoard/index';
 
 
 
@@ -26,6 +29,8 @@ const App = ({ navigation }) => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='SplashScreen'>
         <Stack.Screen name='SplashScreen' component={SplashScreen} options={{ headerShown: false }} />
+        <Stack.Screen name='index' component={StarterBoard} options={{ headerShown: false }} />
+        <Stack.Screen name='TestScreen' component={TestScreen} options={{ headerShown: false }} />
         <Stack.Screen name='Welcome' component={WelcomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name='Login' component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name='Signup' component={SignupScreen} options={{ headerShown: false }} />
