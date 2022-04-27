@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput } from 'react-native';
 import React, {useState} from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 const windowWidth = Dimensions.get('window').width;
@@ -21,7 +21,7 @@ const Love = (props) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={() => navigation.navigate('Experience')}>
-                <Icon name='arrow-left' size={30}
+                <Icon name='arrow-back' size={30}
                     style={{
                         color: 'white',
                         padding: 19,

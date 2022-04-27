@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity, TextInput } from 'react-native';
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -10,7 +10,7 @@ const EnterCode = (props) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-                <Icon name='arrow-left' size={30}
+                <Icon name='arrow-back' size={30}
                     style={{
                         color: 'white',
                         padding: 20,
