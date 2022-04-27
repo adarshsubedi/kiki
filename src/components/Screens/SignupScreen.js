@@ -47,7 +47,8 @@ const SignupScreen = (props) => {
                         fontFamily='Public Sans'
                         color='white'
                         inlineImageLeft='calendar' />
-                    <Icon name='map-marker' size={25}
+                        
+                    <Icon name='calendar' size={20}
                         style={{
                             color: 'white',
                             alignSelf: 'center',
