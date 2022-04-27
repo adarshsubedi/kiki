@@ -37,7 +37,7 @@ const SignupScreen = (props) => {
                     fontFamily='Public Sans'
                     color='white'
                 />
-                <View style={styles.input_dup}>
+                <View style={styles.iconplace}>
                     <TextInput
                         style={{
                             flex: 1,
@@ -84,14 +84,24 @@ const SignupScreen = (props) => {
                     color='white'
                 />
             </View>
-            <View>
-                <TextInput style={styles.input}
-                    placeholder={'Preferred pronoun'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
-            </View>
+            <View style={styles.iconplace}>
+                    <TextInput
+                        style={{
+                            flex: 1,
+                        }}
+                        placeholder={'Preferred pronoun'}
+                        placeholderTextColor='white'
+                        fontFamily='Public Sans'
+                        color='white' />
+                        
+                    <Icon name='chevron-down' size={15}
+                        style={{
+                            color: 'white',
+                            alignSelf: 'center',
+                            paddingLeft: 15,
+                            paddingRight: 15,
+                        }} />
+                </View>
             <Text style={styles.help}>
                 Helps us recommend more relevant content and events
             </Text>
@@ -140,7 +150,7 @@ const styles = StyleSheet.create({
         margin: 7,
         padding: 10,
     },
-    input_dup: {
+    iconplace: {
         borderColor: '#637381',
         borderWidth: 1,
         marginHorizontal: 10,

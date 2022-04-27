@@ -51,23 +51,24 @@ const Location = (props) => {
                 Let us know where you are{'\n'}located, so we can customize{'\n'}events near you.
             </Text>
 
-            <TextInput style={styles.input}
-                placeholder={'Your location'}
-                placeholderTextColor='white'
-                fontFamily='Public Sans'
-                color='white'
-            >
-                <Icon name='map-marker' size={25}
-                    style={{
-                        color: 'white',
-                        padding: 19,
-                        position: 'absolute',
-                        alignSelf: 'flex-end',
-                        justifyContent: 'flex-end',
-                    }}>
-                </Icon>
-
-            </TextInput>
+            <View style={styles.iconplace}>
+                    <TextInput
+                        style={{
+                            flex: 1,
+                        }}
+                        placeholder={'Your Location'}
+                        placeholderTextColor='white'
+                        fontFamily='Public Sans'
+                        color='white' />
+                        
+                    <Icon name='map-marker' size={20}
+                        style={{
+                            color: 'white',
+                            alignSelf: 'center',
+                            paddingLeft: 15,
+                            paddingRight: 15,
+                        }} />
+                </View>
 
             <TouchableOpacity onPress={() => navigation.navigate('Experience')}
                 style={styles.signupbtn}>
@@ -107,6 +108,16 @@ const styles = StyleSheet.create({
         padding: 15,
         textAlign: 'center',
         fontWeight: 'bold',
+    },
+    iconplace: {
+        borderColor: '#637381',
+        borderWidth: 1,
+        marginHorizontal: 10,
+        borderRadius: 7,
+        margin: 7,
+        paddingLeft: 10,
+        flexDirection: 'row',
+        top: 40,
     },
 
 })

@@ -53,41 +53,43 @@ const Experience = (props) => {
 
             <View>
 
-                <TextInput style={styles.input}
-                    placeholder={'Select user type'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                >
-                    {/* <Icon name='chevron-down' size={25}
+            <View style={styles.iconplace}>
+                    <TextInput
+                        style={{
+                            flex: 1,
+                        }}
+                        placeholder={'Select user type'}
+                        placeholderTextColor='white'
+                        fontFamily='Public Sans'
+                        color='white' />
+                        
+                    <Icon name='chevron-down' size={15}
                         style={{
                             color: 'white',
-                            padding: 19,
-                            position: 'absolute',
-                            left: 20,
-                        }}>
-                    </Icon> */}
+                            alignSelf: 'center',
+                            paddingLeft: 15,
+                            paddingRight: 15,
+                        }} />
+                </View>
 
-                </TextInput>
-
-                <TextInput style={styles.input}
-                    placeholder={'What kind of organizer are you?'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-
-
-                >
-                    {/* <Icon name='chevron-down' size={25}
+                <View style={styles.iconplace}>
+                    <TextInput
+                        style={{
+                            flex: 1,
+                        }}
+                        placeholder={'What kind of organizer are you?'}
+                        placeholderTextColor='white'
+                        fontFamily='Public Sans'
+                        color='white' />
+                        
+                    <Icon name='chevron-down' size={15}
                         style={{
                             color: 'white',
-                            padding: 19,
-                            position: 'absolute',
-                            left: 20,
-                        }}>
-                    </Icon> */}
-
-                </TextInput>
+                            alignSelf: 'center',
+                            paddingLeft: 15,
+                            paddingRight: 15,
+                        }} />
+                </View>
 
                 <TextInput style={styles.input}
                     placeholder={'Name of the organizer'}
@@ -136,6 +138,16 @@ const styles = StyleSheet.create({
         padding: 15,
         textAlign: 'center',
         fontWeight: 'bold',
+    },
+    iconplace: {
+        borderColor: '#637381',
+        borderWidth: 1,
+        marginHorizontal: 10,
+        borderRadius: 7,
+        margin: 7,
+        paddingLeft: 10,
+        flexDirection: 'row',
+        top: 40,
     },
 })
 
