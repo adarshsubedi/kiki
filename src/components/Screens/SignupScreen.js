@@ -13,7 +13,7 @@ const SignupScreen = (props) => {
                 <Icon name='arrow-back' size={30}
                     style={{
                         color: 'white',
-                        padding: 19,
+                        padding: 15,
 
                     }}>
                 </Icon>

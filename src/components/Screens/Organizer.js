@@ -13,7 +13,7 @@ const Love = (props) => {
                 <Icon name='arrow-back' size={30}
                     style={{
                         color: 'white',
-                        padding: 19,
+                        padding: 20,
                     }}>
                 </Icon>
             </TouchableOpacity>

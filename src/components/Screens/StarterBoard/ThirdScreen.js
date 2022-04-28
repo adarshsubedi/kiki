@@ -5,6 +5,8 @@ import { useNavigation } from '@react-navigation/native';
 
 const ThirdScreen = () => {
 
+  // const that = this;
+
   const navigation = useNavigation();
 
   return (

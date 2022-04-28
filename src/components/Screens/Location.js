@@ -61,7 +61,7 @@ const Location = (props) => {
                         fontFamily='Public Sans'
                         color='white' />
                         
-                    <Icon name='map-marker' size={20}
+                    <Icon name='map' size={20}
                         style={{
                             color: 'white',
                             alignSelf: 'center',
