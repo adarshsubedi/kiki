@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -8,105 +8,110 @@ const windowHeight = Dimensions.get('window').height;
 const Experience = (props) => {
     const { navigation } = props
     return (
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('Location')}>
-                <Icon name='arrow-back' size={30}
-                    style={{
-                        color: 'white',
-                        padding: 19,
+        <KeyboardAvoidingView
+            behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={styles.container}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Location')}>
+                        <Icon name='arrow-back' size={30}
+                            style={{
+                                color: 'white',
+                                padding: 19,
 
+                            }}>
+                        </Icon>
+                    </TouchableOpacity>
+
+                    <Text style={{
+                        fontFamily: 'Prompt',
+                        fontSize: 16,
+                        color: '#00AB55',
+                        left: 15,
+                        lineHeight: 27,
                     }}>
-                </Icon>
-            </TouchableOpacity>
+                        Step 2/4
+                    </Text>
 
-            <Text style={{
-                fontFamily: 'Prompt',
-                fontSize: 16,
-                color: '#00AB55',
-                left: 15,
-                lineHeight: 27,
-            }}>
-                Step 2/4
-            </Text>
+                    <Text style={{
+                        fontSize: 36,
+                        fontFamily: 'Prompt',
+                        fontWeight: 'bold',
+                        color: 'white',
+                        left: 15,
+                    }}>
+                        Customize your{'\n'}experience
+                    </Text>
 
-            <Text style={{
-                fontSize: 36,
-                fontFamily: 'Prompt',
-                fontWeight: 'bold',
-                color: 'white',
-                left: 15,
-            }}>
-                Customize your{'\n'}experience
-            </Text>
+                    <Text style={{
+                        color: 'white',
+                        fontSize: 18,
+                        fontFamily: 'Prompt',
+                        lineHeight: 27,
+                        left: 15,
+                        top: 20,
+                        // margin: 3,
+                    }}>
+                        How would you like to use Kiki?
+                    </Text>
 
-            <Text style={{
-                color: 'white',
-                fontSize: 18,
-                fontFamily: 'Prompt',
-                lineHeight: 27,
-                left: 15,
-                top: 20,
-                // margin: 3,
-            }}>
-                How would you like to use Kiki?
-            </Text>
+                    <View>
 
-            <View>
+                        <View style={styles.iconplace}>
+                            <TextInput
+                                style={{
+                                    flex: 1,
+                                }}
+                                placeholder={'Select user type'}
+                                placeholderTextColor='white'
+                                fontFamily='Public Sans'
+                                color='white' />
 
-            <View style={styles.iconplace}>
-                    <TextInput
-                        style={{
-                            flex: 1,
-                        }}
-                        placeholder={'Select user type'}
-                        placeholderTextColor='white'
-                        fontFamily='Public Sans'
-                        color='white' />
-                        
-                    <Icon name='chevron-down' size={15}
-                        style={{
-                            color: 'white',
-                            alignSelf: 'center',
-                            paddingLeft: 15,
-                            paddingRight: 15,
-                        }} />
+                            <Icon name='chevron-down' size={15}
+                                style={{
+                                    color: 'white',
+                                    alignSelf: 'center',
+                                    paddingLeft: 15,
+                                    paddingRight: 15,
+                                }} />
+                        </View>
+
+                        <View style={styles.iconplace}>
+                            <TextInput
+                                style={{
+                                    flex: 1,
+                                }}
+                                placeholder={'What kind of organizer are you?'}
+                                placeholderTextColor='white'
+                                fontFamily='Public Sans'
+                                color='white' />
+
+                            <Icon name='chevron-down' size={15}
+                                style={{
+                                    color: 'white',
+                                    alignSelf: 'center',
+                                    paddingLeft: 15,
+                                    paddingRight: 15,
+                                }} />
+                        </View>
+
+                        <TextInput style={styles.input}
+                            placeholder={'Name of the organizer'}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'>
+                        </TextInput>
+                    </View>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('Love')}
+                        style={styles.signupbtn}>
+                        <Text style={styles.signuptxt}>
+                            Next
+                        </Text>
+                    </TouchableOpacity>
+
                 </View>
-
-                <View style={styles.iconplace}>
-                    <TextInput
-                        style={{
-                            flex: 1,
-                        }}
-                        placeholder={'What kind of organizer are you?'}
-                        placeholderTextColor='white'
-                        fontFamily='Public Sans'
-                        color='white' />
-                        
-                    <Icon name='chevron-down' size={15}
-                        style={{
-                            color: 'white',
-                            alignSelf: 'center',
-                            paddingLeft: 15,
-                            paddingRight: 15,
-                        }} />
-                </View>
-
-                <TextInput style={styles.input}
-                    placeholder={'Name of the organizer'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'>
-                </TextInput>
-            </View>
-
-            <TouchableOpacity onPress={() => navigation.navigate('Love')}
-                style={styles.signupbtn}>
-                <Text style={styles.signuptxt}>
-                    Next
-                </Text>
-            </TouchableOpacity>     
-
-        </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView >
     )
 }
 

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Dimensions, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, TouchableOpacity, TextInput, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -9,67 +9,72 @@ const windowHeight = Dimensions.get('window').height;
 const LoginScreen = (props) => {
     const { navigation } = props
     return (
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
-                <Icon name='arrow-back' size={30}
-                    style={{
-                        color: 'white',
-                        padding: 20,
+        <KeyboardAvoidingView
+            behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={styles.container}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
+                        <Icon name='arrow-back' size={30}
+                            style={{
+                                color: 'white',
+                                padding: 20,
 
-                    }}>
-                </Icon>
-            </TouchableOpacity>
-            <Text style={styles.login}>
-                Log in
-            </Text>
-            <Text style={styles.txt}>
-                Enter your email and {'\n'}password to log in.
-            </Text>
-            <View>
-                <TextInput style={styles.input}
-                    placeholder={'Email address'}
-                    placeholderTextColor='#637381'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
-
-                <TextInput style={styles.input}
-                    placeholder={'Password'}
-                    placeholderTextColor='#637381'
-                    fontFamily='Public Sans'
-
-                />
-            </View>
-
-            <TouchableOpacity onPress={() => navigation.navigate('ForgetPassword')}>
-                <Text style={styles.forget}>
-                    Forget Password?
-                </Text>
-            </TouchableOpacity>
-
-            <View>
-                <TouchableOpacity style={styles.btn}>
-                    <Text style={{
-                        fontSize: 17,
-                        fontFamily: 'Public Sans',
-                        textAlign: 'center',
-                        borderRadius: 7,
-                        margin: 12,
-                        fontWeight: 'bold',
-                    }}>Log in</Text>
-                </TouchableOpacity>
-            </View>
-            <View style={styles.footer}>
-                <Text style={styles.account}>
-                    Don't have an account?
-                </Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-                    <Text style={styles.signup}>
-                        Sign up now
+                            }}>
+                        </Icon>
+                    </TouchableOpacity>
+                    <Text style={styles.login}>
+                        Log in
                     </Text>
-                </TouchableOpacity>
-            </View>
-        </View>
+                    <Text style={styles.txt}>
+                        Enter your email and {'\n'}password to log in.
+                    </Text>
+                    <View>
+                        <TextInput style={styles.input}
+                            placeholder={'Email address'}
+                            placeholderTextColor='#637381'
+                            fontFamily='Public Sans'
+                            color='white'
+                        />
+
+                        <TextInput style={styles.input}
+                            placeholder={'Password'}
+                            placeholderTextColor='#637381'
+                            fontFamily='Public Sans'
+
+                        />
+                    </View>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('ForgetPassword')}>
+                        <Text style={styles.forget}>
+                            Forget Password?
+                        </Text>
+                    </TouchableOpacity>
+
+                    <View>
+                        <TouchableOpacity style={styles.btn}>
+                            <Text style={{
+                                fontSize: 17,
+                                fontFamily: 'Public Sans',
+                                textAlign: 'center',
+                                borderRadius: 7,
+                                margin: 12,
+                                fontWeight: 'bold',
+                            }}>Log in</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.footer}>
+                        <Text style={styles.account}>
+                            Don't have an account?
+                        </Text>
+                        <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+                            <Text style={styles.signup}>
+                                Sign up now
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView >
     )
 }
 

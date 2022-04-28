@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Dimensions, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, TouchableOpacity, TextInput, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -8,6 +8,9 @@ const windowHeight = Dimensions.get('window').height;
 const ForgetPassword = (props) => {
     const { navigation } = props
     return (
+        <KeyboardAvoidingView
+            behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                 <Icon name='arrow-back' size={30}
@@ -55,6 +58,8 @@ const ForgetPassword = (props) => {
                 </Text>
             </TouchableOpacity> 
         </View>
+        </TouchableWithoutFeedback>
+    </KeyboardAvoidingView >
     )
 }
 

@@ -11,12 +11,12 @@ const Love = (props) => {
 
     const [selected, setSelected] = useState(0);
 
-    const onEventSelected=tick=>{
-        setSelected(tick);
-        if(props.callback){
-            props.callback(tick)
-        }
-    };
+    // const onEventSelected=tick=>{
+    //     setSelected(tick);
+    //     if(props.callback){
+    //         props.callback(tick)
+    //     }
+    // };
 
     return (
         <View style={styles.container}>
@@ -64,9 +64,10 @@ const Love = (props) => {
 
 
             <View style={styles.eventcat}>
-                <TouchableOpacity onPress={() => onEventSelected(1)}
+                <TouchableOpacity
+                // onPress={() => onEventSelected(1)}
                 style={styles.art}>
-                     <Icon name='map-marker' size={10}
+                     <Icon name='map' size={10}
                         style={{
                             color: 'white',
                             alignSelf: 'center',

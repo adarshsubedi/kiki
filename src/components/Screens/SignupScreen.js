@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Dimensions, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, TextInput, TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -8,112 +8,119 @@ const windowHeight = Dimensions.get('window').height;
 const SignupScreen = (props) => {
     const { navigation } = props
     return (
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
-                <Icon name='arrow-back' size={30}
-                    style={{
-                        color: 'white',
-                        padding: 15,
+        <ScrollView>
+        <KeyboardAvoidingView
+            behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={styles.container}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
+                        <Icon name='arrow-back' size={30}
+                            style={{
+                                color: 'white',
+                                padding: 15,
 
-                    }}>
-                </Icon>
-            </TouchableOpacity>
-            <Text style={styles.signup}>
-                Sign up
-            </Text>
-            <Text style={styles.txt}>
-                Enter your basic information. It{'\n'} only takes a minute.
-            </Text>
-            <View>
-                <TextInput style={styles.input}
-                    placeholder={'First name'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
-                <TextInput style={styles.input}
-                    placeholder={'Last name'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
-                <View style={styles.iconplace}>
-                    <TextInput
-                        style={{
-                            flex: 1,
-                        }}
-                        placeholder={'Date of birth'}
-                        placeholderTextColor='white'
-                        fontFamily='Public Sans'
-                        color='white'
-                        inlineImageLeft='calendar' />
-                        
-                    <Icon name='calendar' size={20}
-                        style={{
-                            color: 'white',
-                            alignSelf: 'center',
-                            paddingLeft: 15,
-                            paddingRight: 15,
-                        }} />
+                            }}>
+                        </Icon>
+                    </TouchableOpacity>
+                    <Text style={styles.signup}>
+                        Sign up
+                    </Text>
+                    <Text style={styles.txt}>
+                        Enter your basic information. It{'\n'} only takes a minute.
+                    </Text>
+                    <View>
+                        <TextInput style={styles.input}
+                            placeholder={'First name'}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                        />
+                        <TextInput style={styles.input}
+                            placeholder={'Last name'}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                        />
+                        <View style={styles.iconplace}>
+                            <TextInput
+                                style={{
+                                    flex: 1,
+                                }}
+                                placeholder={'Date of birth'}
+                                placeholderTextColor='white'
+                                fontFamily='Public Sans'
+                                color='white'
+                                inlineImageLeft='calendar' />
+
+                            <Icon name='calendar' size={20}
+                                style={{
+                                    color: 'white',
+                                    alignSelf: 'center',
+                                    paddingLeft: 15,
+                                    paddingRight: 15,
+                                }} />
+                        </View>
+                        <TextInput style={styles.input}
+                            placeholder={'Password'}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                        />
+                        <TextInput style={styles.input}
+                            placeholder={'Re-enter password'}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                        />
+
+                    </View>
+                    <View style={styles.horizontal}>
+                        <TextInput style={styles.code}
+                            placeholder={'Code'}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                        />
+                        <TextInput style={styles.number}
+                            placeholder={'Phone number'}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                        />
+                    </View>
+                    <View style={styles.iconplace}>
+                        <TextInput
+                            style={{
+                                flex: 1,
+                            }}
+                            placeholder={'Preferred pronoun'}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white' />
+
+                        <Icon name='chevron-down' size={15}
+                            style={{
+                                color: 'white',
+                                alignSelf: 'center',
+                                paddingLeft: 15,
+                                paddingRight: 15,
+                            }} />
+                    </View>
+                    <Text style={styles.help}>
+                        Helps us recommend more relevant content and events
+                    </Text>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('Location')}
+                        style={styles.signupbtn}>
+                        <Text style={styles.signuptxt}>
+                            Sign up
+                        </Text>
+                    </TouchableOpacity>
+
                 </View>
-                <TextInput style={styles.input}
-                    placeholder={'Password'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
-                <TextInput style={styles.input}
-                    placeholder={'Re-enter password'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
-
-            </View>
-            <View style={styles.horizontal}>
-                <TextInput style={styles.code}
-                    placeholder={'Code'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
-                <TextInput style={styles.number}
-                    placeholder={'Phone number'}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                />
-            </View>
-            <View style={styles.iconplace}>
-                    <TextInput
-                        style={{
-                            flex: 1,
-                        }}
-                        placeholder={'Preferred pronoun'}
-                        placeholderTextColor='white'
-                        fontFamily='Public Sans'
-                        color='white' />
-                        
-                    <Icon name='chevron-down' size={15}
-                        style={{
-                            color: 'white',
-                            alignSelf: 'center',
-                            paddingLeft: 15,
-                            paddingRight: 15,
-                        }} />
-                </View>
-            <Text style={styles.help}>
-                Helps us recommend more relevant content and events
-            </Text>
-
-            <TouchableOpacity onPress={() => navigation.navigate('Location')}
-                style={styles.signupbtn}>
-                <Text style={styles.signuptxt}>
-                    Sign up
-                </Text>
-            </TouchableOpacity>
-
-        </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView >
+        </ScrollView>
     )
 }
 
