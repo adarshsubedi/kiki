@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
         color: '#00AB55',
         borderBottomColor: '#00AB55',
         borderBottomWidth: 1,
+        left: 5,
     },
     footer: {
         flexDirection: 'row',

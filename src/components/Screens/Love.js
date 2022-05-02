@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput } from 'react-native';
-import React, {useState} from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, Alert } from 'react-native';
+import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
@@ -9,14 +9,28 @@ const windowHeight = Dimensions.get('window').height;
 const Love = (props) => {
     const { navigation } = props
 
-    const [selected, setSelected] = useState(0);
+    const [selected, setSelected] = useState();
 
-    // const onEventSelected=tick=>{
-    //     setSelected(tick);
-    //     if(props.callback){
-    //         props.callback(tick)
-    //     }
-    // };
+    const ReturnMessage = () => {
+        <Text>
+            Selected
+        </Text>
+    }
+
+    const ReturnMessageNot = () => {
+        if (selected === true )
+            Alert.alert('')
+        else (setSelected === false)
+            Alert.alert('')
+    }
+
+    const onClick = () => {
+        if (selected === true ) {
+            return <ReturnMessage/>
+        } else (setSelected === false); {
+            return <ReturnMessageNot/>
+        }
+    }
 
     return (
         <View style={styles.container}>
@@ -64,36 +78,35 @@ const Love = (props) => {
 
 
             <View style={styles.eventcat}>
-                <TouchableOpacity
-                // onPress={() => onEventSelected(1)}
-                style={styles.art}>
-                     <Icon name='map' size={10}
+                <TouchableOpacity onPress={onClick}
+                    style={styles.art}>
+                    {/* <Icon name='map' size={10}
                         style={{
                             color: 'white',
                             alignSelf: 'center',
                             paddingLeft: 15,
                             paddingRight: 15,
-                        }} />
+                        }} /> */}
                     <Text style={styles.txt}>
                         Arts Theater
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.auto}>
+                <TouchableOpacity onPress={onClick} style={styles.auto}>
                     <Text style={styles.txt}>
-                    Auto, Boat, Air
+                        Auto, Boat, Air
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.beauty}>
                     <Text style={styles.txt}>
-                    Beauty
+                        Beauty
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.business}>
                     <Text style={styles.txt}>
-                    Business
+                        Business
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -101,7 +114,7 @@ const Love = (props) => {
             <View style={styles.eventcatse}>
                 <TouchableOpacity style={styles.charity}>
                     <Text style={styles.txt}>
-                    Charity Causes
+                        Charity Causes
                     </Text>
                 </TouchableOpacity>
 
@@ -113,7 +126,7 @@ const Love = (props) => {
 
                 <TouchableOpacity style={styles.education}>
                     <Text style={styles.txt}>
-                    Education
+                        Education
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -138,20 +151,20 @@ const Love = (props) => {
 
                 <TouchableOpacity style={styles.auto}>
                     <Text style={styles.txt}>
-                    Book Lunch
+                        Book Lunch
                     </Text>
                 </TouchableOpacity>
 
 
                 <TouchableOpacity style={styles.beauty}>
                     <Text style={styles.txt}>
-                    Booze Cruise
+                        Booze Cruise
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.business}>
                     <Text style={styles.txt}>
-                    Brunch
+                        Brunch
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -159,19 +172,19 @@ const Love = (props) => {
             <View style={styles.eventtypese}>
                 <TouchableOpacity style={styles.charity}>
                     <Text style={styles.txt}>
-                    Bowling
+                        Bowling
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.art}>
                     <Text style={styles.txt}>
-                       Class
+                        Class
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.education}>
                     <Text style={styles.txt}>
-                    Cocktail Hour
+                        Cocktail Hour
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -223,26 +236,26 @@ const styles = StyleSheet.create({
         borderColor: '#FD7728',
         borderWidth: 1,
     },
-    beauty:{
+    beauty: {
         backgroundColor: '#F756CF3D',
         height: 40,
         borderRadius: 25,
         borderColor: '#F756CF',
         borderWidth: 1,
     },
-    business:{
+    business: {
         backgroundColor: '#6F359E3D',
         height: 40,
         borderRadius: 25,
         borderColor: '#6F359E',
         borderWidth: 1,
     },
-    charity:{
+    charity: {
         backgroundColor: '#6F359E',
         height: 40,
         borderRadius: 25,
     },
-    education:{
+    education: {
         backgroundColor: '#FEEE363D',
         height: 40,
         borderRadius: 25,
@@ -250,26 +263,26 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         left: 8,
     },
-    eventcat:{
+    eventcat: {
         flexDirection: 'row',
         marginHorizontal: 10,
         top: 50,
         justifyContent: 'space-between',
-        
+
     },
-    eventcatse:{
+    eventcatse: {
         flexDirection: 'row',
         marginHorizontal: 10,
         top: 65,
         // justifyContent: 'space-between',
     },
-    eventtype:{
+    eventtype: {
         flexDirection: 'row',
         marginHorizontal: 10,
         top: 110,
         justifyContent: 'space-between',
     },
-    eventtypese:{
+    eventtypese: {
         flexDirection: 'row',
         marginHorizontal: 10,
         top: 125,

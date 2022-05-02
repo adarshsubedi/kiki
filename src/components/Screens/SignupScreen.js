@@ -8,7 +8,6 @@ const windowHeight = Dimensions.get('window').height;
 const SignupScreen = (props) => {
     const { navigation } = props
     return (
-        <ScrollView>
         <KeyboardAvoidingView
             behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -120,7 +119,6 @@ const SignupScreen = (props) => {
                 </View>
             </TouchableWithoutFeedback>
         </KeyboardAvoidingView >
-        </ScrollView>
     )
 }
 

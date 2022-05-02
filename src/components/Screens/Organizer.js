@@ -51,6 +51,15 @@ const Love = (props) => {
                 Follow your favorite event{'\n'}promoters, event organizers,{'\n'}event spaces and bars.
             </Text>
 
+            <Text style={{
+                color: 'white',
+                fontSize: 18,
+                fontFamily: 'Prompt',
+                lineHeight: 27,
+                left: 15,
+                top: 35,
+            }}>
+                Bar</Text>
             
 
             <View style={styles.btn}>
