@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, ScrollView, Image } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
+import CustomButton from '../CustomButton/CustomButton';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -8,61 +9,72 @@ const windowHeight = Dimensions.get('window').height;
 const Love = (props) => {
     const { navigation } = props
     return (
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('Love')}>
-                <Icon name='arrow-back' size={30}
-                    style={{
-                        color: 'white',
-                        padding: 20,
-                    }}>
-                </Icon>
-            </TouchableOpacity>
+        <ScrollView>
+            <View style={styles.container}>
+                <TouchableOpacity onPress={() => navigation.navigate('Love')}>
+                    <Icon name='arrow-back' size={30}
+                        style={{
+                            color: 'white',
+                            padding: 20,
+                        }}>
+                    </Icon>
+                </TouchableOpacity>
 
-            <Text style={{
-                fontFamily: 'Prompt',
-                fontSize: 16,
-                color: '#00AB55',
-                left: 15,
-                lineHeight: 27,
-            }}>
-                Step 4/4
-            </Text>
+                <Text style={{
+                    fontFamily: 'Prompt',
+                    fontSize: 16,
+                    color: '#00AB55',
+                    left: 15,
+                    lineHeight: 27,
+                }}>
+                    Step 4/4
+                </Text>
 
-            <Text style={{
-                fontSize: 36,
-                fontFamily: 'Prompt',
-                fontWeight: 'bold',
-                color: 'white',
-                left: 15,
-                lineHeight: 45,
-            }}>
-                Follow{'\n'}organizers
-            </Text>
+                <Text style={{
+                    fontSize: 36,
+                    fontFamily: 'Prompt',
+                    fontWeight: 'bold',
+                    color: 'white',
+                    left: 15,
+                    lineHeight: 45,
+                }}>
+                    Follow{'\n'}organizers
+                </Text>
 
-            <Text style={{
-                color: 'white',
-                fontSize: 18,
-                fontFamily: 'Prompt',
-                lineHeight: 27,
-                left: 15,
-                top: 20,
-                // margin: 3,
-            }}>
-                Follow your favorite event{'\n'}promoters, event organizers,{'\n'}event spaces and bars.
-            </Text>
+                <Text style={{
+                    color: 'white',
+                    fontSize: 18,
+                    fontFamily: 'Prompt',
+                    lineHeight: 27,
+                    left: 15,
+                    top: 20,
+                    // margin: 3,
+                }}>
+                    Follow your favorite event{'\n'}promoters, event organizers,{'\n'}event spaces and bars.
+                </Text>
 
-            <Text style={{
-                color: 'white',
-                fontSize: 18,
-                fontFamily: 'Prompt',
-                lineHeight: 27,
-                left: 15,
-                top: 35,
-            }}>
-                Bar</Text>
-            
+                <Text style={{
+                    color: 'white',
+                    fontSize: 18,
+                    fontFamily: 'Prompt',
+                    lineHeight: 27,
+                    left: 15,
+                    top: 35,
+                }}>
+                    Bar</Text>
 
-            <View style={styles.btn}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <CustomButton title='Ralph Edwards' />
+                        <Image source={require('../images/pp1.png')}
+                            style={{ height: 30, width: 30, right: 150, top: 50, }} />
+                    
+                    <CustomButton title='Productions' />
+                    <Image source={require('../images/pp1.png')}
+                             style={{ height: 30, width: 30, right: 150, top: 50, }} />
+                             
+                </View>
+
+                {/* <View style={styles.btn}>
                 <TouchableOpacity onPress={() => navigation.navigate('Congratulations')}
                     style={styles.skip}>
                     <Text style={styles.skiptxt}>
@@ -77,9 +89,10 @@ const Love = (props) => {
                     </Text>
                 </TouchableOpacity>
 
-            </View>
+            </View> */}
 
-        </View>
+            </View>
+        </ScrollView>
     )
 }
 

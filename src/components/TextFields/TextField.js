@@ -1,35 +1,17 @@
-import { StyleSheet, Text, View, TextInput, Input } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 import React from 'react';
-import {Controller} from 'react-hook-form';
 
-function TextField({
-    control,
-    name,
-    value,
-    label,
-    rules,
-    placeholder,
-    secureTextEntry,
-    placeholderTextColor,
-}) {
-
+const TextField = () => {
     return (
-        <Controller
-            control={control}
-            name={name}
-            rules={rules}
-            render={({ field: { onChange, onBlur, value }, fieldState: { error } }) => (
-                <Input
-                    label={label}
-                    value={value}
-                    placeholder={placeholder}
-                    secureTextEntry={secureTextEntry}
-                    placeholderTextColor={placeholderTextColor}
-                />
-            )
-            }
-        />
-    );
+        <View>
+            <TextInput style={styles.input}
+                placeholder={'First name'}
+                placeholderTextColor='white'
+                fontFamily='Public Sans'
+                color='white'
+            />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({

@@ -1,41 +1,46 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
 
-function CustomButton({
-    title,
-    onPress,
-    disabled,
-    loading,
-}) {
+const onPress = () => {
+    navigation.navigate('Welcome')
+}
+
+const CustomButton = ({ onPress, title }) => {
     return (
-        <TouchableOpacity
-        title={title}
-        onPress={onPress}
-        disabled={disabled}
-        loading={loading}
-        buttonStyle={styles.signupbtn}
-        textStyle={styles.signuptxt}
-        />
+        <View>
+            <TouchableOpacity style={styles.btn}>
+            
+                <Text style={styles.txt}>
+                    {title}
+                </Text>
+            </TouchableOpacity>
+
+        </View>
     );
 }
 
 
+
+{/* <Image source={require('../images/pp1.png')}
+    style={{ height: 30, width: 30, paddingTop: 10, paddingLeft: 10, }} /> */}
+
 const styles = StyleSheet.create({
-    signupbtn: {
-        // width: windowWidth,
+    btn: {
         marginHorizontal: 15,
-        height: 50,
-        backgroundColor: '#00AB55',
-        // borderColor: '#00AB55',
-        // borderWidth: 1,
-        margin: 20,
-        borderRadius: 7,
+        backgroundColor: '#FC0D1B3D',
+        borderColor: '#FC0D1B',
+        borderWidth: 1,
+        borderRadius: 25,
+        top: 45,
+        height: 40,
+        width: 140,
     },
-    signuptxt: {
-        color: 'black',
-        padding: 15,
-        textAlign: 'center',
+    txt: {
+        color: 'white',
+        textAlign: 'right',
         fontWeight: 'bold',
+        paddingTop: 10,
+        right: 20,
     },
 })
 
