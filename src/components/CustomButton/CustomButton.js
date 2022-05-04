@@ -5,38 +5,38 @@ const onPress = () => {
     navigation.navigate('Welcome')
 }
 
-const CustomButton = ({ onPress, title, image }) => {
+const CustomButton = ({ onPress, title, image, backgroundColor, borderColor }) => {
     return (
         <View>
-            <TouchableOpacity style={styles.btn}>
-                <Text style={styles.txt}>
-                    {image}{title}
-                </Text>
-            </TouchableOpacity>
+            <Text style={{  backgroundColor, borderColor, borderRadius: 25, borderWidth: 1,}}>
+                <TouchableOpacity style={styles.btn}>
+                    <Text style={styles.txt}>
+                        <Image source={image} />    {title}
+                    </Text>
+                </TouchableOpacity>
+            </Text>
 
         </View>
     );
 }
 
 
-
-{/* <Image source={require('../images/pp1.png')}
-    style={{ height: 30, width: 30, paddingTop: 10, paddingLeft: 10, }} /> */}
-
 const styles = StyleSheet.create({
     btn: {
-        backgroundColor: '#FD77283D',
-        height: 40,
-        borderRadius: 25,
-        borderColor: '#FD7728',
-        borderWidth: 1,
-        marginHorizontal: 10,
+        //height: 42,
+        //borderRadius: 25,
+        //marginHorizontal: 10,
+        // margin: 15,
     },
     txt: {
         color: 'white',
-        marginHorizontal: 15,
-        paddingTop: 12,
+        fontWeight: 'bold',
+        marginHorizontal: 10,
         fontSize: 12,
+        paddingBottom: 7,
+        // alignContent: 'center',
+        bottom: 4,
+        // right: 2,
     },
 })
 

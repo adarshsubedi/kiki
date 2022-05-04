@@ -11,55 +11,57 @@ const ForgetPassword = (props) => {
         <KeyboardAvoidingView
             behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-                <Icon name='arrow-back' size={30}
-                    style={{
+                <View style={styles.container}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                        <Icon name='arrow-back' size={30}
+                            style={{
+                                color: 'white',
+                                paddingLeft: 13,
+                                paddingTop: 25,
+
+                            }}>
+                        </Icon>
+                    </TouchableOpacity>
+
+                    <Text style={{
+                        fontSize: 36,
+                        fontFamily: 'Prompt',
+                        fontWeight: 'bold',
                         color: 'white',
-                        padding: 20,
-
+                        left: 15,
+                        paddingTop: 20,
                     }}>
-                </Icon>
-            </TouchableOpacity>
+                        Forget Password
+                    </Text>
 
-            <Text style={{
-                fontSize: 36,
-                fontFamily: 'Prompt',
-                fontWeight: 'bold',
-                color: 'white',
-                left: 15,
-            }}>
-                Forget Password
-            </Text>
+                    <Text style={{
+                        color: 'white',
+                        fontSize: 18,
+                        fontFamily: 'Prompt',
+                        lineHeight: 27,
+                        left: 15,
+                        top: 20,
+                        // margin: 3,
+                    }}>
+                        Enter your email to receive{'\n'}a one-time password.
+                    </Text>
 
-            <Text style={{
-                color: 'white',
-                fontSize: 18,
-                fontFamily: 'Prompt',
-                lineHeight: 27,
-                left: 15,
-                top: 20,
-                // margin: 3,
-            }}>
-                Enter your email to receive{'\n'}a one-time password.
-            </Text>
+                    <TextInput style={styles.input}
+                        placeholder={'Email address'}
+                        placeholderTextColor='white'
+                        fontFamily='Public Sans'
+                        color='white'>
+                    </TextInput>
 
-            <TextInput style={styles.input}
-                placeholder={'Email address'}
-                placeholderTextColor='white'
-                fontFamily='Public Sans'
-                color='white'>
-            </TextInput>
-
-            <TouchableOpacity onPress={() => navigation.navigate('EnterCode')}
-                style={styles.submitbtn}>
-                <Text style={styles.submittxt}>
-                    Submit
-                </Text>
-            </TouchableOpacity> 
-        </View>
-        </TouchableWithoutFeedback>
-    </KeyboardAvoidingView >
+                    <TouchableOpacity onPress={() => navigation.navigate('EnterCode')}
+                        style={styles.submitbtn}>
+                        <Text style={styles.submittxt}>
+                            Submit
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView >
     )
 }
 

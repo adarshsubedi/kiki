@@ -16,7 +16,8 @@ const SignupScreen = (props) => {
                         <Icon name='arrow-back' size={30}
                             style={{
                                 color: 'white',
-                                padding: 15,
+                                paddingLeft: 13,
+                                paddingTop: 25,
 
                             }}>
                         </Icon>
@@ -136,7 +137,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'white',
         left: 15,
-        height: 45,
+        paddingTop: 20,
     },
     txt: {
         fontSize: 18,

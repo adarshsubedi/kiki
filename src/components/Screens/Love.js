@@ -18,17 +18,17 @@ const Love = (props) => {
     }
 
     const ReturnMessageNot = () => {
-        if (selected === true )
+        if (selected === true)
             Alert.alert('')
         else (setSelected === false)
-            Alert.alert('')
+        Alert.alert('')
     }
 
     const onClick = () => {
-        if (selected === true ) {
-            return <ReturnMessage/>
+        if (selected === true) {
+            return <ReturnMessage />
         } else (setSelected === false); {
-            return <ReturnMessageNot/>
+            return <ReturnMessageNot />
         }
     }
 
@@ -38,7 +38,8 @@ const Love = (props) => {
                 <Icon name='arrow-back' size={30}
                     style={{
                         color: 'white',
-                        padding: 19,
+                        paddingLeft: 13,
+                        paddingTop: 25,
                     }}>
                 </Icon>
             </TouchableOpacity>
@@ -49,6 +50,7 @@ const Love = (props) => {
                 color: '#00AB55',
                 left: 15,
                 lineHeight: 27,
+                paddingTop: 20,
             }}>
                 Step 3/4
             </Text>

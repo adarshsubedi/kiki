@@ -13,7 +13,8 @@ const Congratulations = (props) => {
         <Icon name='arrow-back' size={30}
           style={{
             color: 'white',
-            padding: 19,
+            paddingLeft: 13,
+            paddingTop: 25,
           }}>
         </Icon>
       </TouchableOpacity>
@@ -25,6 +26,7 @@ const Congratulations = (props) => {
         color: 'white',
         left: 15,
         lineHeight: 45,
+        paddingTop: 20,
       }}>
         Congratulations!
       </Text>
@@ -41,8 +43,8 @@ const Congratulations = (props) => {
         Please check and confirm your email to{'\n'}continue browsing our events.
       </Text>
 
-      <TouchableOpacity 
-      //onPress={() => navigation.navigate('Congratulations')}
+      <TouchableOpacity
+        //onPress={() => navigation.navigate('Congratulations')}
         style={styles.loginnow}>
         <Text style={styles.loginnowtxt}>
           Log in now

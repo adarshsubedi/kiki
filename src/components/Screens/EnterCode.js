@@ -9,79 +9,81 @@ const EnterCode = (props) => {
     const { navigation } = props
     return (
         <KeyboardAvoidingView
-        behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-                <Icon name='arrow-back' size={30}
-                    style={{
+            behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={styles.container}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                        <Icon name='arrow-back' size={30}
+                            style={{
+                                color: 'white',
+                                paddingLeft: 13,
+                                paddingTop: 25,
+
+                            }}>
+                        </Icon>
+                    </TouchableOpacity>
+
+                    <Text style={{
+                        fontSize: 36,
+                        fontFamily: 'Prompt',
+                        fontWeight: 'bold',
                         color: 'white',
-                        padding: 20,
-
+                        left: 15,
+                        paddingTop: 20,
                     }}>
-                </Icon>
-            </TouchableOpacity>
+                        Enter Code
+                    </Text>
 
-            <Text style={{
-                fontSize: 36,
-                fontFamily: 'Prompt',
-                fontWeight: 'bold',
-                color: 'white',
-                left: 15,
-            }}>
-                Enter Code
-            </Text>
-
-            <Text style={{
-                color: 'white',
-                fontSize: 18,
-                fontFamily: 'Prompt',
-                lineHeight: 27,
-                left: 15,
-                top: 20,
-                // margin: 3,
-            }}>
-                Enter the OTP code sent to{'\n'}johndoe@gmail.com
-            </Text>
+                    <Text style={{
+                        color: 'white',
+                        fontSize: 18,
+                        fontFamily: 'Prompt',
+                        lineHeight: 27,
+                        left: 15,
+                        top: 20,
+                        // margin: 3,
+                    }}>
+                        Enter the OTP code sent to{'\n'}johndoe@gmail.com
+                    </Text>
 
 
-            <View style={styles.otp}>
-                <TextInput style={styles.code}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                    keyboardType='numeric'
-                />
-                <TextInput style={styles.code}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                    keyboardType='numeric'
-                />
-                <TextInput style={styles.code}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                    keyboardType='numeric'
-                />
-                <TextInput style={styles.code}
-                    placeholderTextColor='white'
-                    fontFamily='Public Sans'
-                    color='white'
-                    keyboardType='numeric'
-                />
-            </View>
+                    <View style={styles.otp}>
+                        <TextInput style={styles.code}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                            keyboardType='numeric'
+                        />
+                        <TextInput style={styles.code}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                            keyboardType='numeric'
+                        />
+                        <TextInput style={styles.code}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                            keyboardType='numeric'
+                        />
+                        <TextInput style={styles.code}
+                            placeholderTextColor='white'
+                            fontFamily='Public Sans'
+                            color='white'
+                            keyboardType='numeric'
+                        />
+                    </View>
 
-            <TouchableOpacity onPress={() => navigation.navigate('ChangePassword')}
-                style={styles.continuebtn}>
-                <Text style={styles.continuetxt}>
-                    Continue
-                </Text>
-            </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('ChangePassword')}
+                        style={styles.continuebtn}>
+                        <Text style={styles.continuetxt}>
+                            Continue
+                        </Text>
+                    </TouchableOpacity>
 
-        </View>
-        </TouchableWithoutFeedback>
-    </KeyboardAvoidingView >
+                </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView >
     )
 }
 
@@ -104,7 +106,7 @@ const styles = StyleSheet.create({
     otp: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        
+
     },
     continuebtn: {
         top: 50,

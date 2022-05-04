@@ -26,8 +26,7 @@ const Love = (props) => {
                     fontSize: 16,
                     color: '#00AB55',
                     left: 15,
-                    paddingTop: 20,
-                    //lineHeight: 27,
+                    paddingTop: 25,
                 }}>
                     Step 4/4
                 </Text>
@@ -38,7 +37,6 @@ const Love = (props) => {
                     fontWeight: 'bold',
                     color: 'white',
                     left: 15,
-                    //lineHeight: 45,
                 }}>
                     Follow{'\n'}organizers
                 </Text>
@@ -50,8 +48,6 @@ const Love = (props) => {
                     lineHeight: 27,
                     left: 15,
                     paddingTop: 20
-                    //top: 20,
-                    // margin: 3,
                 }}>
                     Follow your favorite event{'\n'}promoters, event organizers,{'\n'}event spaces and bars.
                 </Text>
@@ -69,52 +65,68 @@ const Love = (props) => {
 
                 <View style={{ flexDirection: 'row', marginLeft: 8 }}>
                     <CustomButton title='Ralph Edwards'
-                    image={require('../images/pp1.png')} 
+                        backgroundColor={'#FC0D1B3D'}
+                        borderColor={'#FC0D1B'}
+                        image={require('../images/pp1.png')}
                     />
 
 
                     <CustomButton title='Productions'
-                    // img={require('../images/pp1.png')} 
+                        backgroundColor={'#FFFFFF3D'}
+                        borderColor={'#FFFFFF'}
+                        image={require('../images/pp2.png')}
                     />
 
 
                 </View>
 
                 <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8 }}>
-                    <CustomButton title='Arlene McCoy' />
+                    <CustomButton title='Arlene McCoy'
+                        backgroundColor={'#6F359E3D'}
+                        borderColor={'#6F359E'}
+                        image={require('../images/pp3.png')}
+                    />
 
-
-                    <CustomButton title='Cameron Williamson' />
+                    <CustomButton title='Cameron Williamson'
+                        backgroundColor={'#FD77283D'}
+                        borderColor={'#FD7728'}
+                        image={require('../images/pp4.png')}
+                    />
 
                 </View>
 
                 <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8 }}>
-                    <CustomButton title='Wade Warren' />
-                    {/* <Image source={require('../images/pp1.png')}/> */}
+                    <CustomButton title='Wade Warren'
+                        backgroundColor={'#FEEE363D'}
+                        borderColor={'#E4CE00'}
+                        image={require('../images/pp5.png')}
+                    />
 
 
-                    <CustomButton title='Mohammad’s Pro...' />
-                    {/* <Image source={require('../images/pp1.png')}/> */}
+                    <CustomButton title='Mohammad’s Pro...'
+                        backgroundColor={'#FD77283D'}
+                        borderColor={'#FD7728'}
+                        image={require('../images/pp6.png')}
+                    />
 
                 </View>
 
-                {/* <View style={styles.btn}>
-                <TouchableOpacity onPress={() => navigation.navigate('Congratulations')}
-                    style={styles.skip}>
-                    <Text style={styles.skiptxt}>
-                        Skip
-                    </Text>
-                </TouchableOpacity>
+                <View style={styles.btn}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Congratulations')}
+                        style={styles.skip}>
+                        <Text style={styles.skiptxt}>
+                            Skip
+                        </Text>
+                    </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Congratulations')}
-                    style={styles.next}>
-                    <Text style={styles.nexttxt}>
-                        Next
-                    </Text>
-                </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Congratulations')}
+                        style={styles.next}>
+                        <Text style={styles.nexttxt}>
+                            Next
+                        </Text>
+                    </TouchableOpacity>
 
-            </View> */}
-
+                </View>
             </View>
         </ScrollView>
     )
@@ -128,15 +140,13 @@ const styles = StyleSheet.create({
     },
     btn: {
         justifyContent: 'space-around',
-        top: 380,
+        // top: 300,
     },
     skip: {
         marginHorizontal: 15,
         height: 48,
-        //backgroundColor: '#00AB55',
         marginBottom: 15,
         borderRadius: 7,
-
         borderColor: '#00AB55',
         borderWidth: 1,
 

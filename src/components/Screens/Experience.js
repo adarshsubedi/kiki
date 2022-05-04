@@ -16,7 +16,8 @@ const Experience = (props) => {
                         <Icon name='arrow-back' size={30}
                             style={{
                                 color: 'white',
-                                padding: 19,
+                                paddingLeft: 13,
+                                paddingTop: 25,
 
                             }}>
                         </Icon>
@@ -28,6 +29,7 @@ const Experience = (props) => {
                         color: '#00AB55',
                         left: 15,
                         lineHeight: 27,
+                        paddingTop: 20,
                     }}>
                         Step 2/4
                     </Text>

@@ -13,7 +13,8 @@ const PasswordChanged = (props) => {
                 <Icon name='arrow-back' size={30}
                     style={{
                         color: 'white',
-                        padding: 20,
+                        paddingLeft: 13,
+                        paddingTop: 25,
 
                     }}>
                 </Icon>
@@ -25,6 +26,7 @@ const PasswordChanged = (props) => {
                 fontWeight: 'bold',
                 color: 'white',
                 left: 15,
+                paddingTop: 20,
             }}>
                 Congratulations!
             </Text>
@@ -38,16 +40,16 @@ const PasswordChanged = (props) => {
                 top: 20,
                 // margin: 3,
             }}>
-              Your password has been{'\n'}changed.
+                Your password has been{'\n'}changed.
             </Text>
 
-            <TouchableOpacity 
-            //onPress={() => navigation.navigate('EnterCode')}
+            <TouchableOpacity
+                //onPress={() => navigation.navigate('EnterCode')}
                 style={styles.loginbtn}>
                 <Text style={styles.logintxt}>
                     Log in
                 </Text>
-            </TouchableOpacity> 
+            </TouchableOpacity>
         </View>
     )
 }
