@@ -15,7 +15,8 @@ const Love = (props) => {
                     <Icon name='arrow-back' size={30}
                         style={{
                             color: 'white',
-                            padding: 20,
+                            paddingLeft: 13,
+                            paddingTop: 19,
                         }}>
                     </Icon>
                 </TouchableOpacity>
@@ -25,7 +26,8 @@ const Love = (props) => {
                     fontSize: 16,
                     color: '#00AB55',
                     left: 15,
-                    lineHeight: 27,
+                    paddingTop: 20,
+                    //lineHeight: 27,
                 }}>
                     Step 4/4
                 </Text>
@@ -36,7 +38,7 @@ const Love = (props) => {
                     fontWeight: 'bold',
                     color: 'white',
                     left: 15,
-                    lineHeight: 45,
+                    //lineHeight: 45,
                 }}>
                     Follow{'\n'}organizers
                 </Text>
@@ -47,7 +49,8 @@ const Love = (props) => {
                     fontFamily: 'Prompt',
                     lineHeight: 27,
                     left: 15,
-                    top: 20,
+                    paddingTop: 20
+                    //top: 20,
                     // margin: 3,
                 }}>
                     Follow your favorite event{'\n'}promoters, event organizers,{'\n'}event spaces and bars.
@@ -59,19 +62,40 @@ const Love = (props) => {
                     fontFamily: 'Prompt',
                     lineHeight: 27,
                     left: 15,
-                    top: 35,
+                    paddingTop: 30,
+                    paddingBottom: 25,
                 }}>
                     Bar</Text>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <CustomButton title='Ralph Edwards' />
-                        <Image source={require('../images/pp1.png')}
-                            style={{ height: 30, width: 30, right: 150, top: 50, }} />
-                    
-                    <CustomButton title='Productions' />
-                    <Image source={require('../images/pp1.png')}
-                             style={{ height: 30, width: 30, right: 150, top: 50, }} />
-                             
+                <View style={{ flexDirection: 'row', marginLeft: 8 }}>
+                    <CustomButton title='Ralph Edwards'
+                    image={require('../images/pp1.png')} 
+                    />
+
+
+                    <CustomButton title='Productions'
+                    // img={require('../images/pp1.png')} 
+                    />
+
+
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8 }}>
+                    <CustomButton title='Arlene McCoy' />
+
+
+                    <CustomButton title='Cameron Williamson' />
+
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8 }}>
+                    <CustomButton title='Wade Warren' />
+                    {/* <Image source={require('../images/pp1.png')}/> */}
+
+
+                    <CustomButton title='Mohammad’s Pro...' />
+                    {/* <Image source={require('../images/pp1.png')}/> */}
+
                 </View>
 
                 {/* <View style={styles.btn}>

@@ -5,13 +5,12 @@ const onPress = () => {
     navigation.navigate('Welcome')
 }
 
-const CustomButton = ({ onPress, title }) => {
+const CustomButton = ({ onPress, title, image }) => {
     return (
         <View>
             <TouchableOpacity style={styles.btn}>
-            
                 <Text style={styles.txt}>
-                    {title}
+                    {image}{title}
                 </Text>
             </TouchableOpacity>
 
@@ -26,21 +25,18 @@ const CustomButton = ({ onPress, title }) => {
 
 const styles = StyleSheet.create({
     btn: {
-        marginHorizontal: 15,
-        backgroundColor: '#FC0D1B3D',
-        borderColor: '#FC0D1B',
-        borderWidth: 1,
-        borderRadius: 25,
-        top: 45,
+        backgroundColor: '#FD77283D',
         height: 40,
-        width: 140,
+        borderRadius: 25,
+        borderColor: '#FD7728',
+        borderWidth: 1,
+        marginHorizontal: 10,
     },
     txt: {
         color: 'white',
-        textAlign: 'right',
-        fontWeight: 'bold',
-        paddingTop: 10,
-        right: 20,
+        marginHorizontal: 15,
+        paddingTop: 12,
+        fontSize: 12,
     },
 })
 
