@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, Alert } from 'react-native';
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import CustomButtonOrg from '../CustomButton/CustomButtonOrg';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -72,127 +72,101 @@ const Love = (props) => {
                 fontFamily: 'Prompt',
                 lineHeight: 27,
                 left: 15,
-                top: 20,
+                paddingTop: 20,
             }}>
                 Event categories
             </Text>
 
+            <View style={{ flexDirection: 'row', paddingTop: 20, marginHorizontal: 5, justifyContent: 'space-evenly' }}>
+                <CustomButtonOrg title='Arts & Theater'
+                    backgroundColor={'#FC0D1B3D'}
+                    borderColor={'#FC0D1B'}
+                />
 
+                <CustomButtonOrg title='Auto, Boat, Air'
+                    backgroundColor={'#FD77283D'}
+                    borderColor={'#FD7728'}
+                />
 
-            <View style={styles.eventcat}>
-                <TouchableOpacity onPress={onClick}
-                    style={styles.art}>
-                    {/* <Icon name='map' size={10}
-                        style={{
-                            color: 'white',
-                            alignSelf: 'center',
-                            paddingLeft: 15,
-                            paddingRight: 15,
-                        }} /> */}
-                    <Text style={styles.txt}>
-                        Arts Theater
-                    </Text>
-                </TouchableOpacity>
+                <CustomButtonOrg title='Beauty'
+                    backgroundColor={'#F756CF3D'}
+                    borderColor={'#F756CF'}
+                />
 
-                <TouchableOpacity onPress={onClick} style={styles.auto}>
-                    <Text style={styles.txt}>
-                        Auto, Boat, Air
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.beauty}>
-                    <Text style={styles.txt}>
-                        Beauty
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.business}>
-                    <Text style={styles.txt}>
-                        Business
-                    </Text>
-                </TouchableOpacity>
+                <CustomButtonOrg title='Business'
+                    backgroundColor={'#6F359E3D'}
+                    borderColor={'#6F359E'}
+                />
             </View>
 
-            <View style={styles.eventcatse}>
-                <TouchableOpacity style={styles.charity}>
-                    <Text style={styles.txt}>
-                        Charity Causes
-                    </Text>
-                </TouchableOpacity>
+            <View style={{ flexDirection: 'row', paddingTop: 20, marginHorizontal: 15, justifyContent: 'flex-start' }}>
+                <CustomButtonOrg title='Charity & Causes'
+                    backgroundColor={'#F756CF3D'}
+                    borderColor={'#F756CF'}
+                />
+                <Text style={{ padding: 5 }}></Text>
 
-                <TouchableOpacity style={styles.art}>
-                    <Text style={styles.txt}>
-                        Community
-                    </Text>
-                </TouchableOpacity>
+                <CustomButtonOrg title='Community'
+                    backgroundColor={'#FC0D1B3D'}
+                    borderColor={'#FC0D1B'}
+                />
+                <Text style={{ padding: 5 }}></Text>
 
-                <TouchableOpacity style={styles.education}>
-                    <Text style={styles.txt}>
-                        Education
-                    </Text>
-                </TouchableOpacity>
+                <CustomButtonOrg title='Education'
+                    backgroundColor={'#FEEE363D'}
+                    borderColor={'#FEEE36'}
+                />
             </View>
 
             <Text style={{
                 color: 'white',
                 fontSize: 18,
-                fontFamily: 'Prompt',
-                lineHeight: 27,
                 left: 15,
-                top: 90,
+                paddingTop: 30,
             }}>
                 Event types
             </Text>
 
-            <View style={styles.eventtype}>
-                <TouchableOpacity style={styles.art}>
-                    <Text style={styles.txt}>
-                        Art Show
-                    </Text>
-                </TouchableOpacity>
+            <View style={{ flexDirection: 'row', paddingTop: 25, justifyContent: 'space-evenly' }}>
+                <CustomButtonOrg title='Art show'
+                    backgroundColor={'#FC0D1B3D'}
+                    borderColor={'#FC0D1B'}
+                />
 
-                <TouchableOpacity style={styles.auto}>
-                    <Text style={styles.txt}>
-                        Book Lunch
-                    </Text>
-                </TouchableOpacity>
+                <CustomButtonOrg title='Book Lunch'
+                    backgroundColor={'#FD77283D'}
+                    borderColor={'#FD7728'}
+                />
 
+                <CustomButtonOrg title='Booze Cruise'
+                    backgroundColor={'#F756CF3D'}
+                    borderColor={'#F756CF'}
+                />
 
-                <TouchableOpacity style={styles.beauty}>
-                    <Text style={styles.txt}>
-                        Booze Cruise
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.business}>
-                    <Text style={styles.txt}>
-                        Brunch
-                    </Text>
-                </TouchableOpacity>
+                <CustomButtonOrg title='Brunch'
+                    backgroundColor={'#6F359E3D'}
+                    borderColor={'#6F359E'}
+                />
             </View>
 
-            <View style={styles.eventtypese}>
-                <TouchableOpacity style={styles.charity}>
-                    <Text style={styles.txt}>
-                        Bowling
-                    </Text>
-                </TouchableOpacity>
+            <View style={{ flexDirection: 'row', paddingTop: 20, marginHorizontal: 15, justifyContent: 'flex-start' }}>
+                <CustomButtonOrg title='Bowling'
+                    backgroundColor={'#F756CF3D'}
+                    borderColor={'#F756CF'}
+                />
+                <Text style={{ padding: 5 }}></Text>
 
-                <TouchableOpacity style={styles.art}>
-                    <Text style={styles.txt}>
-                        Class
-                    </Text>
-                </TouchableOpacity>
+                <CustomButtonOrg title='Class'
+                    backgroundColor={'#FC0D1B3D'}
+                    borderColor={'#FC0D1B'}
+                />
+                <Text style={{ padding: 5 }}></Text>
 
-                <TouchableOpacity style={styles.education}>
-                    <Text style={styles.txt}>
-                        Cocktail Hour
-                    </Text>
-                </TouchableOpacity>
+                <CustomButtonOrg title='Cocktail Hour'
+                    backgroundColor={'#FEEE363D'}
+                    borderColor={'#FEEE36'}
+                />
             </View>
-
-
-
 
             <View style={styles.btn}>
                 <TouchableOpacity onPress={() => navigation.navigate('Congratulations')}
@@ -208,87 +182,16 @@ const Love = (props) => {
                         Next
                     </Text>
                 </TouchableOpacity>
-
             </View>
-
         </View>
-    )
+    );
 }
-
 
 const styles = StyleSheet.create({
     txt: {
         color: 'white',
         marginHorizontal: 15,
         paddingTop: 12,
-        fontSize: 12,
-    },
-    art: {
-        backgroundColor: '#FC0D1B3D',
-        height: 40,
-        borderRadius: 25,
-        borderColor: '#FC0D1B',
-        borderWidth: 1,
-        left: 3,
-    },
-    auto: {
-        backgroundColor: '#FD77283D',
-        height: 40,
-        borderRadius: 25,
-        borderColor: '#FD7728',
-        borderWidth: 1,
-    },
-    beauty: {
-        backgroundColor: '#F756CF3D',
-        height: 40,
-        borderRadius: 25,
-        borderColor: '#F756CF',
-        borderWidth: 1,
-    },
-    business: {
-        backgroundColor: '#6F359E3D',
-        height: 40,
-        borderRadius: 25,
-        borderColor: '#6F359E',
-        borderWidth: 1,
-    },
-    charity: {
-        backgroundColor: '#6F359E',
-        height: 40,
-        borderRadius: 25,
-    },
-    education: {
-        backgroundColor: '#FEEE363D',
-        height: 40,
-        borderRadius: 25,
-        borderColor: '#FEEE36',
-        borderWidth: 1,
-        left: 8,
-    },
-    eventcat: {
-        flexDirection: 'row',
-        marginHorizontal: 10,
-        top: 50,
-        justifyContent: 'space-between',
-
-    },
-    eventcatse: {
-        flexDirection: 'row',
-        marginHorizontal: 10,
-        top: 65,
-        // justifyContent: 'space-between',
-    },
-    eventtype: {
-        flexDirection: 'row',
-        marginHorizontal: 10,
-        top: 110,
-        justifyContent: 'space-between',
-    },
-    eventtypese: {
-        flexDirection: 'row',
-        marginHorizontal: 10,
-        top: 125,
-        // justifyContent: 'space-between',
     },
     container: {
         height: windowHeight,
@@ -297,7 +200,7 @@ const styles = StyleSheet.create({
     },
     btn: {
         justifyContent: 'space-around',
-        top: 242,
+        paddingTop: 105,
     },
     skip: {
         marginHorizontal: 15,
@@ -306,7 +209,6 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         borderColor: '#00AB55',
         borderWidth: 1,
-
     },
     skiptxt: {
         fontFamily: 'Public Sans',
@@ -320,7 +222,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     next: {
-        // width: windowWidth,
         marginHorizontal: 15,
         height: 50,
         backgroundColor: '#00AB55',

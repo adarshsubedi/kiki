@@ -5,13 +5,13 @@ const onPress = () => {
     navigation.navigate('Welcome')
 }
 
-const CustomButton = ({ onPress, title, image, backgroundColor, borderColor }) => {
+const CustomButtonOrg = ({ onPress, title, backgroundColor, borderColor }) => {
     return (
         <View>
             <Text style={{  backgroundColor, borderColor, borderRadius: 25, borderWidth: 1,}}>
                 <TouchableOpacity style={styles.btn}>
                     <Text style={styles.txt}>
-                        <Image source={image} />    {title}
+                        {title}
                     </Text>
                 </TouchableOpacity>
             </Text>
@@ -24,7 +24,7 @@ const CustomButton = ({ onPress, title, image, backgroundColor, borderColor }) =
 const styles = StyleSheet.create({
     btn: {
         height: 38,
-        marginHorizontal: 10,
+        marginHorizontal: 15,
         right: 10,
     },
     txt: {
@@ -32,9 +32,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginHorizontal: 10,
         fontSize: 12,
-        paddingBottom: 7,
+        paddingTop: 16,
+        //paddingBottom: 7,
         bottom: 4,
     },
 })
 
-export default CustomButton;
+export default CustomButtonOrg;

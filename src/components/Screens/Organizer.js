@@ -3,8 +3,8 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import CustomButton from '../CustomButton/CustomButton';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+// const windowWidth = Dimensions.get('window').width;
+// const windowHeight = Dimensions.get('window').height;
 
 const Love = (props) => {
     const { navigation } = props
@@ -47,7 +47,7 @@ const Love = (props) => {
                     fontFamily: 'Prompt',
                     lineHeight: 27,
                     left: 15,
-                    paddingTop: 20
+                    paddingTop: 25,
                 }}>
                     Follow your favorite event{'\n'}promoters, event organizers,{'\n'}event spaces and bars.
                 </Text>
@@ -58,7 +58,7 @@ const Love = (props) => {
                     fontFamily: 'Prompt',
                     lineHeight: 27,
                     left: 15,
-                    paddingTop: 30,
+                    paddingTop: 25,
                     paddingBottom: 25,
                 }}>
                     Bar</Text>
@@ -70,6 +70,7 @@ const Love = (props) => {
                         image={require('../images/pp1.png')}
                     />
 
+                    <Text style={{ padding: 5 }}></Text>
 
                     <CustomButton title='Productions'
                         backgroundColor={'#FFFFFF3D'}
@@ -87,6 +88,10 @@ const Love = (props) => {
                         image={require('../images/pp3.png')}
                     />
 
+
+
+                    <Text style={{ padding: 5 }}></Text>
+
                     <CustomButton title='Cameron Williamson'
                         backgroundColor={'#FD77283D'}
                         borderColor={'#FD7728'}
@@ -102,11 +107,136 @@ const Love = (props) => {
                         image={require('../images/pp5.png')}
                     />
 
+                    <Text style={{ padding: 5 }}></Text>
 
                     <CustomButton title='Mohammad’s Pro...'
                         backgroundColor={'#FD77283D'}
                         borderColor={'#FD7728'}
                         image={require('../images/pp6.png')}
+                    />
+
+                </View>
+
+
+
+                <Text style={{
+                    color: 'white',
+                    fontSize: 18,
+                    fontFamily: 'Prompt',
+                    lineHeight: 27,
+                    left: 15,
+                    paddingTop: 25,
+                    paddingBottom: 25,
+                }}>
+                    Promoter</Text>
+
+
+
+                <View style={{ flexDirection: 'row', marginLeft: 8 }}>
+                    <CustomButton title='Arlene McCoy'
+                        backgroundColor={'#6F359E3D'}
+                        borderColor={'#6F359E'}
+                        image={require('../images/pp3.png')}
+                    />
+
+                    <Text style={{ padding: 5 }}></Text>
+
+
+                    <CustomButton title='Cameron Williamson'
+                        backgroundColor={'#FD77283D'}
+                        borderColor={'#FD7728'}
+                        image={require('../images/pp4.png')}
+                    />
+
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8 }}>
+                    <CustomButton title='Ralph Edwards'
+                        backgroundColor={'#FC0D1B3D'}
+                        borderColor={'#FC0D1B'}
+                        image={require('../images/pp1.png')}
+                    />
+
+                    <Text style={{ padding: 5 }}></Text>
+
+
+                    <CustomButton title='Productions'
+                        backgroundColor={'#FFFFFF3D'}
+                        borderColor={'#FFFFFF'}
+                        image={require('../images/pp2.png')}
+                    />
+
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8 }}>
+                    <CustomButton title='Arlene McCoy'
+                        backgroundColor={'#6F359E3D'}
+                        borderColor={'#6F359E'}
+                        image={require('../images/pp3.png')}
+                    />
+
+                    <Text style={{ padding: 5 }}></Text>
+
+
+                    <CustomButton title='Cameron Williamson'
+                        backgroundColor={'#FD77283D'}
+                        borderColor={'#FD7728'}
+                        image={require('../images/pp4.png')}
+                    />
+
+                </View>
+
+
+                <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8 }}>
+                    <CustomButton title='Wade Warren'
+                        backgroundColor={'#FEEE363D'}
+                        borderColor={'#E4CE00'}
+                        image={require('../images/pp5.png')}
+                    />
+
+                    <Text style={{ padding: 5 }}></Text>
+
+
+                    <CustomButton title='Mohammad’s Pro...'
+                        backgroundColor={'#FD77283D'}
+                        borderColor={'#FD7728'}
+                        image={require('../images/pp6.png')}
+                    />
+
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8 }}>
+                    <CustomButton title='Ralph Edwards'
+                        backgroundColor={'#FC0D1B3D'}
+                        borderColor={'#FC0D1B'}
+                        image={require('../images/pp1.png')}
+                    />
+
+                    <Text style={{ padding: 5 }}></Text>
+
+
+                    <CustomButton title='Productions'
+                        backgroundColor={'#FFFFFF3D'}
+                        borderColor={'#FFFFFF'}
+                        image={require('../images/pp2.png')}
+                    />
+
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingTop: 10, marginLeft: 8, paddingBottom: 50 }}>
+                    <CustomButton title='Arlene McCoy'
+                        backgroundColor={'#6F359E3D'}
+                        borderColor={'#6F359E'}
+                        image={require('../images/pp3.png')}
+                    />
+
+                    <Text style={{ padding: 5 }}></Text>
+
+
+                    <CustomButton title='Cameron Williamson'
+                        backgroundColor={'#FD77283D'}
+                        borderColor={'#FD7728'}
+                        image={require('../images/pp4.png')}
                     />
 
                 </View>
@@ -127,6 +257,8 @@ const Love = (props) => {
                     </TouchableOpacity>
 
                 </View>
+
+
             </View>
         </ScrollView>
     )
@@ -134,13 +266,13 @@ const Love = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        height: windowHeight,
-        width: windowWidth,
+        // height: windowHeight,
+        // width: windowWidth,
         backgroundColor: '#000E28',
     },
     btn: {
         justifyContent: 'space-around',
-        // top: 300,
+        paddingBottom: 40,
     },
     skip: {
         marginHorizontal: 15,
