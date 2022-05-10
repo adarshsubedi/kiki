@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, Alert 
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import CustomButtonOrg from '../CustomButton/CustomButtonOrg';
+// import CheckBox from '@react-native-community/checkbox';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -9,28 +10,7 @@ const windowHeight = Dimensions.get('window').height;
 const Love = (props) => {
     const { navigation } = props
 
-    const [selected, setSelected] = useState();
-
-    const ReturnMessage = () => {
-        <Text>
-            Selected
-        </Text>
-    }
-
-    const ReturnMessageNot = () => {
-        if (selected === true)
-            Alert.alert('')
-        else (setSelected === false)
-        Alert.alert('')
-    }
-
-    const onClick = () => {
-        if (selected === true) {
-            return <ReturnMessage />
-        } else (setSelected === false); {
-            return <ReturnMessageNot />
-        }
-    }
+    // const [isSelected, setSelection] = useState(false);
 
     return (
         <View style={styles.container}>
@@ -78,41 +58,48 @@ const Love = (props) => {
             </Text>
 
             <View style={{ flexDirection: 'row', paddingTop: 20, marginHorizontal: 5, justifyContent: 'space-evenly' }}>
-                <CustomButtonOrg title='Arts & Theater'
+                <CustomButtonOrg
+                    title='Arts & Theater'
                     backgroundColor={'#FC0D1B3D'}
                     borderColor={'#FC0D1B'}
                 />
 
-                <CustomButtonOrg title='Auto, Boat, Air'
+                <CustomButtonOrg
+                    title='Auto, Boat, Air'
                     backgroundColor={'#FD77283D'}
                     borderColor={'#FD7728'}
                 />
 
-                <CustomButtonOrg title='Beauty'
+                <CustomButtonOrg
+                    title='Beauty'
                     backgroundColor={'#F756CF3D'}
                     borderColor={'#F756CF'}
                 />
 
-                <CustomButtonOrg title='Business'
+                <CustomButtonOrg
+                    title='Business'
                     backgroundColor={'#6F359E3D'}
                     borderColor={'#6F359E'}
                 />
             </View>
 
             <View style={{ flexDirection: 'row', paddingTop: 20, marginHorizontal: 15, justifyContent: 'flex-start' }}>
-                <CustomButtonOrg title='Charity & Causes'
+                <CustomButtonOrg
+                    title='Charity & Causes'
                     backgroundColor={'#F756CF3D'}
                     borderColor={'#F756CF'}
                 />
                 <Text style={{ padding: 5 }}></Text>
 
-                <CustomButtonOrg title='Community'
+                <CustomButtonOrg
+                    title='Community'
                     backgroundColor={'#FC0D1B3D'}
                     borderColor={'#FC0D1B'}
                 />
                 <Text style={{ padding: 5 }}></Text>
 
-                <CustomButtonOrg title='Education'
+                <CustomButtonOrg
+                    title='Education'
                     backgroundColor={'#FEEE363D'}
                     borderColor={'#FEEE36'}
                 />
@@ -128,41 +115,48 @@ const Love = (props) => {
             </Text>
 
             <View style={{ flexDirection: 'row', paddingTop: 25, justifyContent: 'space-evenly' }}>
-                <CustomButtonOrg title='Art show'
+                <CustomButtonOrg
+                    title='Art show'
                     backgroundColor={'#FC0D1B3D'}
                     borderColor={'#FC0D1B'}
                 />
 
-                <CustomButtonOrg title='Book Lunch'
+                <CustomButtonOrg
+                    title='Book Lunch'
                     backgroundColor={'#FD77283D'}
                     borderColor={'#FD7728'}
                 />
 
-                <CustomButtonOrg title='Booze Cruise'
+                <CustomButtonOrg
+                    title='Booze Cruise'
                     backgroundColor={'#F756CF3D'}
                     borderColor={'#F756CF'}
                 />
 
-                <CustomButtonOrg title='Brunch'
+                <CustomButtonOrg
+                    title='Brunch'
                     backgroundColor={'#6F359E3D'}
                     borderColor={'#6F359E'}
                 />
             </View>
 
             <View style={{ flexDirection: 'row', paddingTop: 20, marginHorizontal: 15, justifyContent: 'flex-start' }}>
-                <CustomButtonOrg title='Bowling'
+                <CustomButtonOrg
+                    title='Bowling'
                     backgroundColor={'#F756CF3D'}
                     borderColor={'#F756CF'}
                 />
                 <Text style={{ padding: 5 }}></Text>
 
-                <CustomButtonOrg title='Class'
+                <CustomButtonOrg
+                    title='Class'
                     backgroundColor={'#FC0D1B3D'}
                     borderColor={'#FC0D1B'}
                 />
                 <Text style={{ padding: 5 }}></Text>
 
-                <CustomButtonOrg title='Cocktail Hour'
+                <CustomButtonOrg
+                    title='Cocktail Hour'
                     backgroundColor={'#FEEE363D'}
                     borderColor={'#FEEE36'}
                 />
