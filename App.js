@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -17,6 +17,8 @@ import ChangePassword from './src/components/Screens/ChangePassword';
 import PasswordChanged from './src/components/Screens/PasswordChanged';
 import SplashScreen from './src/components/Screens/SplashScreen';
 import TestScreen from './src/components/Screens/TestScreen';
+import Dashboard from './src/components/Screens/Dashboard';
+import Icons from './src/components/Screens/Icons';
 
 import StarterBoard from './src/components/Screens/StarterBoard/index';
 
@@ -27,7 +29,10 @@ const Stack = createNativeStackNavigator();
 const App = ({ navigation }) => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Love'>
+      <Stack.Navigator initialRouteName='Dashboard' screenOptions={{
+        headerStyle: { backgroundColor: '#000E28' },
+        headerTintColor: 'white',
+      }}>
         <Stack.Screen name='SplashScreen' component={SplashScreen} options={{ headerShown: false }} />
         <Stack.Screen name='index' component={StarterBoard} options={{ headerShown: false }} />
         <Stack.Screen name='TestScreen' component={TestScreen} options={{ headerShown: false }} />
@@ -43,8 +48,25 @@ const App = ({ navigation }) => {
         <Stack.Screen name='EnterCode' component={EnterCode} options={{ headerShown: false }} />
         <Stack.Screen name='ChangePassword' component={ChangePassword} options={{ headerShown: false }} />
         <Stack.Screen name='PasswordChanged' component={PasswordChanged} options={{ headerShown: false }} />
+        {/* <Stack.Screen name='Dashboard' component={Dashboard} options={{ headerShown: false }} /> */}
+
+        <Stack.Screen
+          name="Dashboard"
+          component={Dashboard}
+          // options={{headerShown: false}}
+          options={{
+            title: 'Dashboard',
+
+            headerBackVisible: false,
+            headerStyle: {
+              backgroundColor: '#000E28',
+            },
+            headerRight: () => <Icons />,
+          }}
+        />
+
       </Stack.Navigator>
-    </NavigationContainer>
+    </NavigationContainer >
   )
 }
 

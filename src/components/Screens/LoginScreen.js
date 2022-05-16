@@ -52,7 +52,8 @@ const LoginScreen = (props) => {
                     </TouchableOpacity>
 
                     <View>
-                        <TouchableOpacity style={styles.btn}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}
+                        style={styles.btn}>
                             <Text style={{
                                 fontSize: 17,
                                 fontFamily: 'Public Sans',

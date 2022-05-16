@@ -44,7 +44,7 @@ const Congratulations = (props) => {
       </Text>
 
       <TouchableOpacity
-        //onPress={() => navigation.navigate('Congratulations')}
+        onPress={() => navigation.navigate('Dashboard')}
         style={styles.loginnow}>
         <Text style={styles.loginnowtxt}>
           Log in now
