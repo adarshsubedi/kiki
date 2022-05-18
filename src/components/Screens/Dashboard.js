@@ -1,8 +1,10 @@
-import { StyleSheet, Text, View, Dimensions, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, TextInput, TouchableOpacity, ScrollView, ImageBackground, Image } from 'react-native';
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Icons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icons from 'react-native-vector-icons/FontAwesome';
+// import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import CircularBar from './CircularBar';
+import NavBar from './NavBar';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -149,15 +151,8 @@ const Dashboard = () => {
 
                 </View>
 
-                <View style={styles.navbar}>
-                    <View style={{  }}>
-                        <TouchableOpacity style={{ borderRadius: 0, width: 50 }}>
-                            <Image source={require('../images/Vector.png')}
-                                style={{height: 25, width: 20}} />
-
-                        </TouchableOpacity>
-                    </View>
-                    
+                <View>
+                    <NavBar />
                 </View>
 
             </View>
@@ -165,13 +160,7 @@ const Dashboard = () => {
     );
 };
 const styles = StyleSheet.create({
-    navbar: {
-        height: 75,
 
-        justifyContent: 'space-evenly',
-        marginHorizontal: 15,
-        //paddingTop: 20,
-    },
     container: {
         // height: windowHeight,
         // width: windowWidth,
