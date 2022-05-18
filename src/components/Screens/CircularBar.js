@@ -20,15 +20,17 @@ const CircularBar = () => {
                     <View style={styles.circle}>
                         <CircularProgress
                             radius={30}
-                            value={80}
+                            value={75}
                             titleColor="#222"
                             valueSuffix={'%'}
                             inActiveStrokeColor={'#2ecc71'}
                             inActiveStrokeOpacity={0.2}
+                            inActiveStrokeWidth={5}
+                            activeStrokeWidth={5}
                         />
                     </View>
                     <Text style={styles.text}>
-                        0%{'\n'}
+                        75%{'\n'}
                         Tickets sold
                     </Text>
                     <Icon
@@ -56,17 +58,19 @@ const CircularBar = () => {
                     <View style={styles.circle}>
                         <CircularProgress
                             radius={30}
-                            value={85}
+                            value={75}
                             titleColor="#FFC107"
                             valueSuffix={'%'}
                             inActiveStrokeColor={'#FFC107'}
                             inActiveStrokeOpacity={0.2}
                             activeStrokeColor={'#FFC107'}
+                            inActiveStrokeWidth={5}
+                            activeStrokeWidth={5}
                         />
                     </View>
                     <Text style={styles.text}>
                         {' '}
-                        $0{'\n'}
+                        $5,874{'\n'}
                         Gross income
                     </Text>
                     <Icon
@@ -94,16 +98,19 @@ const CircularBar = () => {
                     <View style={styles.circle}>
                         <CircularProgress
                             radius={30}
-                            value={85}
+                            value={75}
                             titleColor="#B066ED"
                             valueSuffix={'%'}
                             inActiveStrokeColor={'#B066ED'}
                             inActiveStrokeOpacity={0.2}
                             activeStrokeColor={'#B066ED'}
+                            inActiveStrokeWidth={5}
+                            activeStrokeWidth={5}
+                            
                         />
                     </View>
                     <Text style={styles.text}>
-                        $0{'\n'}
+                        $4,512{'\n'}
                         Net income
                     </Text>
                     <Icon
@@ -115,6 +122,7 @@ const CircularBar = () => {
                             paddingTop: 8,
                             paddingRight: 10,
                             opacity: 0.2,
+
                         }}
                     />
                 </View>
@@ -124,7 +132,7 @@ const CircularBar = () => {
 };
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         padding: 10,
         // flexDirection: 'column',
     },
@@ -146,7 +154,9 @@ const styles = StyleSheet.create({
         // opacity: 0.5,
         color: '#222D65',
     },
-    //   circle: {},
+      circle: {
+          
+      },
 });
 
 export default CircularBar;

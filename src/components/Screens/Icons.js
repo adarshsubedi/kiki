@@ -30,4 +30,5 @@ const Icons = () => {
 };
 
 const styles = StyleSheet.create({});
+
 export default Icons;
