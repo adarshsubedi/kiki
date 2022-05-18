@@ -55,12 +55,12 @@ const NavBar = () => {
 
 const styles = StyleSheet.create({
     navbar: {
+        bottom: 0,
         height: 75,
         flexDirection: 'row',
         paddingTop: 25,
         justifyContent: 'space-between',
         marginHorizontal: 20,
-        // alignSelf: 'center',
     },
 })
 
